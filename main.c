@@ -25,9 +25,9 @@ int main() {
     printf("Type: %d\n", type);
     double aux;
     //aux = height/width;
-    if(height>width) aux = (height/200);
-    else aux = (width/200);   
-        
+    if(height>width) aux = (width/200);
+    else aux = (height/200);   
+            
     cairo_surface_t *surface; 
     if (strcmp(JSON_getString(root, "format"), "png") == 0){
  	    surface =   	

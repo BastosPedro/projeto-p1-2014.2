@@ -70,7 +70,7 @@ void create_point(cairo_t *context, Point * points, int x, int y, int z, double 
         cairo_arc(context, points[i].x - x*0.02, points[i].y + y*0.02, 2.5*a, 0, 2*360);
         cairo_fill (context);
         cairo_stroke(context);
-        }
+        }   
     cairo_restore(context);
 }
 void write_text(cairo_t *context, const char *string, int x, int y, double a, Color color) {

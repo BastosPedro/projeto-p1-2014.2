@@ -1,10 +1,10 @@
 {
-    "fileName": "wall.png",
+    "fileName": "wall3.png",
     "format": "png",
     "name": "Grafico!",
     "width": 200,
-    "height": 200,
-    "type": 0,
+    "height": 800,
+    "type": 1,
     "color": [255, 0, 255, 255],
     "points": [
 	{"x": 30, "y": 100},

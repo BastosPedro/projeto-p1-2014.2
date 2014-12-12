@@ -47,7 +47,7 @@ Point * JSON_getPoints(json_t *root) {
     } 
     for(i = 0; i< json_array_size(jPoints); ++i){
 	points[i].x = points[i].x * (width/alphax);
-	points[i].y = (height) - (points[i].y * (height/alphay));
+	points[i].y = 1.1*(height) - (points[i].y * (height/alphay));
     }	
     return points;
 }
