@@ -16,7 +16,7 @@ int main() {
     printf("O nome do arquivo é: %s\n", fileName); 
     const char * format = JSON_getString(root, "format");
     if(strcmp(format, "png") != 0 && strcmp(format, "pdf") != 0 ){
-        printf("Formato: o formato %s não é suportado!\n", format);
+        printf("Formato: o formato %s não é  suportado!\n", format);
         return 0;
     }
     printf("O formato é: %s\n", JSON_getString(root, "format"));
@@ -42,7 +42,7 @@ int main() {
     else aux = (height/200);   
             
     cairo_surface_t *surface; 
-    if (strcmp(JSON_getString(root, "format"), "png") == 0){
+    if(strcmp(format, "png") == 0){
  	    surface =   	
 	    cairo_image_surface_create(CAIRO_FORMAT_ARGB32, width, height);
     }
