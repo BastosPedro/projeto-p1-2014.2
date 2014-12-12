@@ -13,13 +13,26 @@ int main() {
         return error.line;
     }
     const char * fileName = JSON_getString(root, "fileName");
-    printf("O nome do arquivo é: %s\n", fileName);
+    printf("O nome do arquivo é: %s\n", fileName); 
+    const char * format = JSON_getString(root, "format");
+    if(strcmp(format, "png") != 0 && strcmp(format, "pdf") != 0 ){
+        printf("Formato: o formato %s não é suportado!\n", format);
+        return 0;
+    }
     printf("O formato é: %s\n", JSON_getString(root, "format"));
     const char * name = JSON_getString(root, "name");
     printf("O titulo do grafico é: %s\n", name);
     int width = JSON_getInt(root, "width");
+    if(width < 200 || width > 1000){
+        printf("Width: medida não suportada!\n");
+        return 0;
+    }
     printf("Width: %d\n", width);
     int height = JSON_getInt(root, "height");
+    if(height < 200 || height > 1000){
+        printf("Height: medida não suportada!\n");
+        return 0;
+    }
     printf("Height: %d\n", height);
     int type = JSON_getInt(root, "type");
     printf("Type: %d\n", type);
